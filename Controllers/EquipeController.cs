@@ -16,7 +16,20 @@ namespace ocean_ejogos_api.Controllers
         [HttpGet]
         public IActionResult qualquercoisa()
         {
-            return Ok("Localizar equipes");
+            // tente executar o código abaixo
+            try
+            {
+                // throw new Exception("Aconteceu um erro");
+                return Ok("Localizar equipes");
+            }
+            catch (Exception)
+            {
+                return BadRequest("Consulte o administrador do sistema");
+            }
+            finally
+            {
+                // no final sempre executa
+            }
         }
 
 /*
